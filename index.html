@@ -76,7 +76,7 @@
         <label class="label"
           >Type
           <select name="type" id="type" required>
-            <option value="c" selected>Celcius</option>
+            <option value="c" selected>celsius</option>
             <option value="f">Fahrenheit</option>
             <option value="k">Kelvin</option>
           </select>
@@ -107,19 +107,19 @@
           resultTwo.innerText = convertToKelvin(degrees, "c");
         } else if (type === "f") {
           console.log("HEloo4");
-          console.log(convertToCelcius(degrees, "c"));
+          console.log(convertTocelsius(degrees, "c"));
           console.log(convertToKelvin(degrees, "c"));
-          resultOne.innerText = convertToCelcius(degrees, "f");
+          resultOne.innerText = convertTocelsius(degrees, "f");
           resultTwo.innerText = convertToKelvin(degrees, "f");
         } else {
           console.log("HEloo4");
-          console.log(convertToCelcius(degrees, "c"));
+          console.log(convertTocelsius(degrees, "c"));
           console.log(convertToFahrenheit(degrees, "c"));
-          resultOne.innerText = convertToCelcius(degrees, "k");
+          resultOne.innerText = convertTocelsius(degrees, "k");
           resultTwo.innerText = convertToFahrenheit(degrees, "k");
         }
       });
-      const convertToCelcius = (value, from) => {
+      const convertTocelsius = (value, from) => {
         if (from === "f") {
           return `${((value - 32) * (5 / 9)).toFixed(2)} C`;
         } else {
